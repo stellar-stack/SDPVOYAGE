@@ -43,6 +43,19 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+    
+        'base.authenticate.CookiesAuthentication',
+    )
+
+}
+
+SIMPLE_JWT = {
+    'USER_ID_FIELD': 'username'
+}
+
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
